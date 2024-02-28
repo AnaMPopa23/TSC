@@ -1,0 +1,24 @@
+top:
+->logic - declaram semnale si variabile, alege dac e wire sauu reg
+->opcode_t - tip de date declarat de utilizator in package
+-> opcode = operatia dintre a si b
+-> reset_n = activ in 0 (face reset cans resetul e 0) =  renitializare variabile
+->modulul = tip, instanta = obiect
+-> initial begin = cod nu neaparat sintetizabil; zice compilatorului care se executa cu timpul de simulare 0
+-> #5 = 5 unitati de timp declarate timeunit 1ns/1ns; unitate = 1 ns cu pas de 1ns
+-> la tst_clk astept 4 secunde dupa astept 2 nanosecunde si il ridica in 1 dupa 8 ns in 0; apoi se va astepta doar 2 secunde sa se faca iar 1
+-> sunt in faza diferita, dar au aceeasi perioada => frontul de posedge sau negedge va veni in mom diferite
+
+package:
+-> typedef enum logic - un tip de date de tip enumerare care ppate sa tina variabile 
+->logice de la 3 la 0, adica 16 valori 2^4; daca pun 2:0 voi putea adauga 8 valori
+->daca nu se specifica ce tip e data, e unsigned
+
+Tema:
+struct trb sa aiba si rez signed
+switch
+op code = 0 = => rez =0
+pass a => rez = a
+add => rez = a+b
+---
+
