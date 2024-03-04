@@ -20,10 +20,13 @@ package instr_register_pkg;
   
   typedef logic [4:0] address_t;
 
+  typedef logic signed [63:0] result_t; //dublu fata de operand
+
   typedef struct {
     opcode_t  opc;
     operand_t op_a;
     operand_t op_b;
+    result_t rezultat; //adaug rezultatul 
   } instruction_t;
 
 endpackage: instr_register_pkg
