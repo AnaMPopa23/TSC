@@ -40,8 +40,8 @@ import instr_register_pkg::*;  // user-defined types are defined in instr_regist
     else if (load_en) begin 
       // cand o sa fie load_en = 1 voi pune structura in array-ul iw_reg la adresa write_pointer
       // utlima valoaatre e valida la overwrite
-      else if (load_en) begin
     case (opcode)
+      ZERO: iw_reg[write_pointer] = '{opcode,operand_a,operand_b, 'b0};
       PASSA : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, operand_a};
       PASSB : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, operand_b};
       ADD   : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a + operand_b)};
@@ -50,9 +50,7 @@ import instr_register_pkg::*;  // user-defined types are defined in instr_regist
       DIV   : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a / operand_b)};
       MOD   : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a % operand_b)};
     default : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, 'b0};
-    endcase
-  end
-      iw_reg[write_pointer] = '{opcode,operand_a,operand_b};
+    endcase //32 de elemente
     end
 
   // read from the register
