@@ -21,10 +21,10 @@ module instr_register_test
   timeunit 1ns/1ns;
 
   parameter WR_NR = 20;
-
   parameter RD_NR =  19;
 
   instruction_t  iw_reg_test[0:31];
+  result_t result_test;
 
   int seed = 555;  
 
@@ -45,7 +45,7 @@ module instr_register_test
 
     $display("\nWriting values to register stack...");
     @(posedge clk) load_en = 1'b1;  // enable writing to register
-    //repeat (3) begin AP: 3/6/2025
+    //repeat (3) begin Ana Popa: 3/6/2025
     repeat (WR_NR) begin 
       @(posedge clk) randomize_transaction;
       @(negedge clk) print_transaction;
@@ -54,7 +54,7 @@ module instr_register_test
 
     // read back and display same three register locations
     $display("\nReading back the same register locations written...");
-    for (int i=0; i<=RD_NR; i++) begin
+    for (int i=0; i<=RD_NR; i++) begin  //Ana Popa 3/6/2024
       // later labs will replace this loop with iterating through a
       // scoreboard to determine which addresses were written and
       // the expected values to be read back
@@ -106,31 +106,34 @@ module instr_register_test
   endfunction: print_results
 
   function void check_results;
-    static result_t result = 'b0; // Initialize result with 'b0
-    case(iw_reg_test[read_pointer].opc)
-        ZERO: result = 'b0;
-        PASSA: result = iw_reg_test[read_pointer].op_a;
-        PASSB: result = iw_reg_test[read_pointer].op_b;
-        ADD: result = iw_reg_test[read_pointer].op_a + iw_reg_test[read_pointer].op_b;
-        SUB: result = iw_reg_test[read_pointer].op_a - iw_reg_test[read_pointer].op_b;
-        MULT: result = iw_reg_test[read_pointer].op_a * iw_reg_test[read_pointer].op_b;
-        DIV: begin
-                if (iw_reg_test[read_pointer].op_b == 'b0) begin
-                    result = 'b0;
-                end
-                else begin
-                    result = iw_reg_test[read_pointer].op_a / iw_reg_test[read_pointer].op_b;
-                end
-            end
-        MOD: result = iw_reg_test[read_pointer].op_a %iw_reg_test[read_pointer].op_b;
-    endcase
+    case (iw_reg_test[read_pointer].opc)
+        ZERO: result_test = {64{1'b0}};
+        PASSA: result_test = iw_reg_test[read_pointer].op_a;
+        PASSB: result_test = iw_reg_test[read_pointer].op_b;
+        ADD: result_test = iw_reg_test[read_pointer].op_a + iw_reg_test[read_pointer].op_b;
+        SUB: result_test = iw_reg_test[read_pointer].op_a - iw_reg_test[read_pointer].op_b;
+        MULT: result_test = iw_reg_test[read_pointer].op_a * iw_reg_test[read_pointer].op_b;
+        DIV: if (iw_reg_test[read_pointer].op_b == {64{1'b0}})
+               result_test = {64{1'b0}}; 
+             else
+               result_test = iw_reg_test[read_pointer].op_a / iw_reg_test[read_pointer].op_b;
+        MOD: result_test = iw_reg_test[read_pointer].op_a % iw_reg_test[read_pointer].op_b;
+        default: result_test = {64{1'b0}};
+      endcase
 
-    if(instruction_word.rezultat === result) begin
-        $display("The result is correct!"); 
-    end
-    else begin
-        $display("ERROR: The result is incorrect! Please check!"); 
-    end
- endfunction
+    $display("\nCheck result:");
+    $display("  read_pointer = %0d", read_pointer);
+    $display("  opcode = %0d (%s)", iw_reg_test[read_pointer].opc, iw_reg_test[read_pointer].opc.name);
+    $display("  operand_a = %0d",   iw_reg_test[read_pointer].op_a);
+    $display("  operand_b = %0d\n", iw_reg_test[read_pointer].op_b);
+    $display("\nCalculated test result: %0d\n", result_test);
+
+      if(result_test === instruction_word.rezultat) begin
+        $display("  result = %0d\n", result_test);
+        $display("The result is correct! :) \n");
+      end
+      else
+        $display("The result is incorrect! PLEASE CHECK! :( \n");
+  endfunction: check_results
 
 endmodule: instr_register_test
