@@ -113,7 +113,7 @@ module instr_register_test
         ADD: result_test = iw_reg_test[read_pointer].op_a + iw_reg_test[read_pointer].op_b;
         SUB: result_test = iw_reg_test[read_pointer].op_a - iw_reg_test[read_pointer].op_b;
         MULT: result_test = iw_reg_test[read_pointer].op_a * iw_reg_test[read_pointer].op_b;
-        DIV: if (iw_reg_test[read_pointer].op_b == {64{1'b0}})
+        DIV: if (iw_reg_test[read_pointer].op_b == {32{1'b0}})
                result_test = {64{1'b0}}; 
              else
                result_test = iw_reg_test[read_pointer].op_a / iw_reg_test[read_pointer].op_b;
@@ -121,19 +121,22 @@ module instr_register_test
         default: result_test = {64{1'b0}};
       endcase
 
-    $display("\nCheck result:");
+    $display("\nCheck result function:");
     $display("  read_pointer = %0d", read_pointer);
     $display("  opcode = %0d (%s)", iw_reg_test[read_pointer].opc, iw_reg_test[read_pointer].opc.name);
     $display("  operand_a = %0d",   iw_reg_test[read_pointer].op_a);
     $display("  operand_b = %0d\n", iw_reg_test[read_pointer].op_b);
     $display("\nCalculated test result: %0d\n", result_test);
 
-      if(result_test === instruction_word.rezultat) begin
+      if(result_test === instruction_word.rezultat) 
+      begin
         $display("  result = %0d\n", result_test);
         $display("The result is correct! :) \n");
       end
-      else
+      else 
+      begin
         $display("The result is incorrect! PLEASE CHECK! :( \n");
+      end
   endfunction: check_results
 
 endmodule: instr_register_test

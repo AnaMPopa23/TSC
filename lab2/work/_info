@@ -11,15 +11,15 @@ Z0 dC:/Users/popaa/Desktop/Popa Ana-Maria/FACULTATE/Anul 4/Semestrul 2/TSC/lab2/
 vinstr_register
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
 Z2 DXx4 work 18 instr_register_pkg 0 22 N1dKYjIem:?fj68m<_;D;1
-!s110 1710267277
+!s110 1710271340
 !i10b 1
-!s100 @AdQn0aGnkfj?jk;z[nmP1
-IQ<0`:niJ3maLJ9IU[bLA]3
+!s100 cIJV?TciAiZBXfT_EW;?=1
+IW4ic;F2fHjO3_CKFT9XAi2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 instr_register_sv_unit
 S1
 R0
-w1709711646
+w1710271309
 8C:/Users/popaa/Desktop/Popa Ana-Maria/FACULTATE/Anul 4/Semestrul 2/TSC/lab2/TSC/lab2/lab_dut/instr_register.sv
 FC:/Users/popaa/Desktop/Popa Ana-Maria/FACULTATE/Anul 4/Semestrul 2/TSC/lab2/TSC/lab2/lab_dut/instr_register.sv
 L0 9
@@ -27,7 +27,7 @@ Z4 OV;L;10.5c;63
 r1
 !s85 0
 31
-!s108 1710267277.000000
+!s108 1710271340.000000
 !s107 C:/Users/popaa/Desktop/Popa Ana-Maria/FACULTATE/Anul 4/Semestrul 2/TSC/lab2/TSC/lab2/lab_dut/instr_register.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/popaa/Desktop/Popa Ana-Maria/FACULTATE/Anul 4/Semestrul 2/TSC/lab2/TSC/lab2/lab_dut/instr_register.sv|
 !i113 1
@@ -59,15 +59,15 @@ R6
 vinstr_register_test
 R1
 R2
-!s110 1710267401
+!s110 1710271347
 !i10b 1
-!s100 UdZSLZF_bJCNY]Yd7@3kk0
-I^>FGOK_E]@dhCZUFBMCHn1
+!s100 3JA9Z1kD_1jIE=oA<ZI971
+IEUgU>me;EdbJD8lkmAcfY1
 R3
 !s105 instr_register_test_sv_unit
 S1
 R0
-w1710267394
+w1710271075
 8C:/Users/popaa/Desktop/Popa Ana-Maria/FACULTATE/Anul 4/Semestrul 2/TSC/lab2/TSC/lab2/lab01_testbench-interface/instr_register_test.sv
 FC:/Users/popaa/Desktop/Popa Ana-Maria/FACULTATE/Anul 4/Semestrul 2/TSC/lab2/TSC/lab2/lab01_testbench-interface/instr_register_test.sv
 L0 8
@@ -75,7 +75,7 @@ R4
 r1
 !s85 0
 31
-!s108 1710267401.000000
+!s108 1710271347.000000
 !s107 C:/Users/popaa/Desktop/Popa Ana-Maria/FACULTATE/Anul 4/Semestrul 2/TSC/lab2/TSC/lab2/lab01_testbench-interface/instr_register_test.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/popaa/Desktop/Popa Ana-Maria/FACULTATE/Anul 4/Semestrul 2/TSC/lab2/TSC/lab2/lab01_testbench-interface/instr_register_test.sv|
 !i113 1
