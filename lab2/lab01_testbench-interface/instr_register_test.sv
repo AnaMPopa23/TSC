@@ -20,17 +20,26 @@ module instr_register_test
 
   timeunit 1ns/1ns;
 
-  parameter WR_NR = 20;
-  parameter RD_NR =  19;
+  parameter WR_NR = 3;
+  parameter RD_NR =  2;
+  parameter READ_ORDER;
+
+  if (READ_ORDER = 1) 
+    WR_NR = 3;
+    RD_NR = 2;                                        //increment
+  else if ( READ_ORDER = 2 )                          // random
+    WR_NR = $unsigned($random)%32;
+    RD_NR = $unsigned($random)%32;
+      else if ( READ_ORDER = 3)
+        temp = 31;                                    // decrement
 
   instruction_t  iw_reg_test[0:31];
   result_t result_test;
-
   int seed = 555;  
 
   initial begin
     $display("\n\n***********************************************************");
-    $display(    "***  THIS IS NOT A SELF-CHECKING TESTBENCH (YET).  YOU  ***");
+    $display(    "***  THIS IS A SELF-CHECKING TESTBENCH (YET).  YOU      ***");
     $display(    "***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***");
     $display(    "***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***");
     $display(    "***********************************************************");
@@ -65,7 +74,7 @@ module instr_register_test
 
     @(posedge clk) ;
     $display("\n***********************************************************");
-    $display(  "***  THIS IS NOT A SELF-CHECKING TESTBENCH (YET).  YOU  ***");
+    $display(  "***  THIS IS A SELF-CHECKING TESTBENCH (YET).  YOU      ***");
     $display(  "***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***");
     $display(  "***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***");
     $display(  "***********************************************************\n");
@@ -79,15 +88,26 @@ module instr_register_test
     // The stactic temp variable is required in order to write to fixed
     // addresses of 0, 1 and 2.  This will be replaceed with randomizeed
     // write_pointer values in a later lab
-    //
-    static int temp = 0;                               // nu se mai aloca alta variabila de memorie, doar prima dara cand primeste valoarea
-    // random -> valori pe 32 de biti signed
-    operand_a     <= $random(seed)%16;                 // between -15 and 15
+    static int temp = 0;                                     // nu se mai aloca alta variabila de memorie, doar prima dara cand primeste valoarea
+                                                    
+    if (READ_ORDER = 1) 
+       temp = 0;                                        //increment
+       else if ( READ_ORDER = 2 )
+        temp = ;
+        else if ( READ_ORDER = 3)
+          temp = 31;                                    // decrement
+                                                       // nu se mai aloca alta variabila de memorie, doar prima dara cand primeste valoarea
+
+    case
+                                                       // random -> valori pe 32 de biti signed
+    operand_a     = $random(seed)%16;                 // between -15 and 15
     // unsigned = nr poz din nr negativ
-    operand_b     <= $unsigned($random)%16;            // between 0 and 15
-    opcode        <= opcode_t'($unsigned($random)%8);  // between 0 and 7, cast to opcode_t type
-    write_pointer <= temp++;                           // temp++ = mai intai asigneaza 0 si dupa se incrementeaza
-    iw_reg_test[temp] = '{opcode, operand_a, operand_b, 'b0};
+    operand_b     = $unsigned($random)%16;            // between 0 and 15
+    opcode        = opcode_t'($unsigned($random)%8);  // between 0 and 7, cast to opcode_t type
+    write_pointer = temp++;                           // temp++ = mai intai asigneaza 0 si dupa se incrementeaza
+    iw_reg_test[write_pointer] = '{opcode, operand_a, operand_b, 'b0};  //variabila auxiliara (temporara) pt a stoca date la un mom dat
+    $display("After randomize transaction function: op_a = %d, op_b =%d, opcode = %d, time = %t \n", operand_a, operand_b, opcode, $time);
+
   endfunction: randomize_transaction
 
   function void print_transaction;
@@ -121,12 +141,11 @@ module instr_register_test
         default: result_test = {64{1'b0}};
       endcase
 
-    $display("\nCheck result function:");
-    $display("  read_pointer = %0d", read_pointer);
+    $display("\nCheck result function location %0d:", read_pointer);
     $display("  opcode = %0d (%s)", iw_reg_test[read_pointer].opc, iw_reg_test[read_pointer].opc.name);
     $display("  operand_a = %0d",   iw_reg_test[read_pointer].op_a);
-    $display("  operand_b = %0d\n", iw_reg_test[read_pointer].op_b);
-    $display("\nCalculated test result: %0d\n", result_test);
+    $display("  operand_b = %0d", iw_reg_test[read_pointer].op_b);
+    $display("  test result: %0d\n", result_test);
 
       if(result_test === instruction_word.rezultat) 
       begin
@@ -138,5 +157,6 @@ module instr_register_test
         $display("The result is incorrect! PLEASE CHECK! :( \n");
       end
   endfunction: check_results
+
 
 endmodule: instr_register_test

@@ -22,3 +22,19 @@ pass a => rez = a
 add => rez = a+b
 ---
 
+Lab3:
+
+dut = calculator
+    = primeste op a, op b etc
+    = calculeaza rezultatulul lui a si b dupa opcode cand load en =1
+    = stocheaza a, b, op, rez in array
+    = raspunde cu date din array dupa un read pointer
+
+test = da variabile pt dut
+     = read pointer care e o adresa pentru a da ce a stocat
+     = primeste de la dut op a op b rez
+    
+iw reg test =  cand dut trimite date la test sunt salvate aici
+
+LORDR31
+
