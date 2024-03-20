@@ -20,7 +20,7 @@ module instr_register_test
 
   timeunit 1ns/1ns;
 
-  parameter WR_NR = 3;
+  parameter WR_NR = 3;           //setam cate citiri si scrieri
   parameter RD_NR =  2;
   int READ_ORDER;
   int WRITE_ORDER;                                  
