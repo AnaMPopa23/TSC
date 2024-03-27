@@ -22,8 +22,11 @@ module instr_register_test
 
   parameter WR_NR = 3;           //setam cate citiri si scrieri
   parameter RD_NR =  2;
-  int READ_ORDER;
-  int WRITE_ORDER;                                  
+
+  parameter READ_ORDER =5;
+  parameter WRITE_ORDER = 6; 
+
+  parameter TEST_CASE =                                 
 
   instruction_t  iw_reg_test[0:31];
   result_t result_test;
@@ -40,12 +43,12 @@ module instr_register_test
     $display(    "***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***");
     $display(    "***********************************************************");
 
-    for ( int ro = 0; ro  <= 2; ro++ ) begin
-      for ( int wo = 0; wo <= 2; wo ++ ) begin
-        $display("\nTest: READ_ORDER = %d, WRITE_ORDER = %d.\n", ro,wo);
+    for ( int READ_ORDER = 0; READ_ORDER  <= 2; READ_ORDER++ ) begin
+      for ( int WRITE_ORDER = 0; WRITE_ORDER <= 2; WRITE_ORDER ++ ) begin
+        //$display("\nTest: READ_ORDER = %d, WRITE_ORDER = %d.\n", ro,wo);
 
-        READ_ORDER = ro;
-        WRITE_ORDER = wo;
+        //READ_ORDER = ro;
+        //WRITE_ORDER = wo;
 
         $display("\nReseting the instruction register...");
         write_pointer  = 5'h00;         // initialize write pointer
