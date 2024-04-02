@@ -23,7 +23,7 @@ if {$compile_on || [batch_mode] == 0} {
 }
 
 # Load project
-  eval vsim -novopt -quiet -GWR_NR=$1 -GRD_NR=$2 -GWRITE_NR=$3 -GREAD_NR=$4 -nocoverage +notimingchecks +nowarnTSCALE -sva top
+  eval vsim -novopt -quiet -GWR_NR=$1 -GRD_NR=$2 -GWRITE_NR=$3 -GREAD_NR=$4 -GTEST_NAME=$5 -nocoverage +notimingchecks +nowarnTSCALE -sva top
 # eval vsim -novopt -quiet -nocoverage +notimingchecks +nowarnTSCALE -sva top
 # eval vsim -novopt -quiet -coverage +code=bcesft +notimingchecks +nowarnTSCALE -sva top
 
