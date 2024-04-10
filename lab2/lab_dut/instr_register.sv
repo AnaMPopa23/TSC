@@ -47,11 +47,11 @@ import instr_register_pkg::*;  // user-defined types are defined in instr_regist
       ADD   : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a + operand_b)};
       SUB   : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a - operand_b)};
       MULT  : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a * operand_b)};
-      //DIV   : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a / operand_b)};    12/3/2025 Ana Popa
-      DIV   : if(operand_b == 0)
+      DIV   : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a / operand_b)};    //12/3/2024 Ana Popa
+      /*DIV   : if(operand_b == 0)
                 iw_reg[write_pointer] = '{opcode, operand_a, operand_b, 'b0};
               else 
-                iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a / operand_b)};
+                iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a / operand_b)};*/
         
       MOD   : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a % operand_b)};
     default : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, 'b0};

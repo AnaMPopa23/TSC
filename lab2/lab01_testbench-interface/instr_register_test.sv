@@ -26,12 +26,16 @@ module instr_register_test
   parameter READ_ORDER =5;
   parameter WRITE_ORDER = 6; 
 
-  parameter TEST_NAME =  "test";                               
+  parameter TEST_NAME =  "test"; 
+
+  parameter SEED_VAL = 2;                              
 
   instruction_t  iw_reg_test[0:31];
   result_t result_test;
 
-  int seed = 555;  
+  //int seed = 555;    AP - 10/04/2024
+  int seed = SEED_VAL;  
+
   int passed_tests = 0;
   int total_tests = 0;
 
