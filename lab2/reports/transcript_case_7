@@ -1,6 +1,6 @@
 # 1
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 08:51:20 on Apr 10,2024
+# Start time: 14:58:54 on Apr 16,2024
 # vlog -sv -timescale 1ps/1ps -work work -f sources.txt 
 # -- Compiling package instr_register_pkg
 # -- Compiling module instr_register
@@ -10,10 +10,10 @@
 # 
 # Top level modules:
 # 	top
-# End time: 08:51:20 on Apr 10,2024, Elapsed time: 0:00:00
+# End time: 14:58:54 on Apr 16,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=case_7 -GWR_NR=50 -GRD_NR=32 -GWRITE_NR=2 -GSEED_VAL=9876543 -GREAD_NR=2 
-# Start time: 08:51:20 on Apr 10,2024
+# Start time: 14:58:54 on Apr 16,2024
 # ** Warning: (vsim-3040) Command line generic/parameter "READ_NR" not found in design.
 # ** Warning: (vsim-3040) Command line generic/parameter "WRITE_NR" not found in design.
 # 
@@ -5444,7 +5444,7 @@
 #   opcode = 6 (DIV)
 #   operand_a = 15
 #   operand_b = 0
-#   rezultat = x
+#   rezultat = 0
 # 
 # 
 # Check result function location 3:
@@ -5453,7 +5453,9 @@
 #   operand_b = 0
 #   test result: 0
 # 
-# The result is incorrect! PLEASE CHECK! :( 
+#   result = 0
+# 
+# The result is correct! :) 
 # 
 # Read from register location 2: 
 #   opcode = 0 (ZERO)
@@ -6359,7 +6361,7 @@
 #   opcode = 6 (DIV)
 #   operand_a = -9
 #   operand_b = 0
-#   rezultat = x
+#   rezultat = 0
 # 
 # 
 # Check result function location 19:
@@ -6368,13 +6370,15 @@
 #   operand_b = 0
 #   test result: 0
 # 
-# The result is incorrect! PLEASE CHECK! :( 
+#   result = 0
+# 
+# The result is correct! :) 
 # 
 # Read from register location 11: 
 #   opcode = 6 (DIV)
 #   operand_a = 9
 #   operand_b = 0
-#   rezultat = x
+#   rezultat = 0
 # 
 # 
 # Check result function location 11:
@@ -6383,7 +6387,9 @@
 #   operand_b = 0
 #   test result: 0
 # 
-# The result is incorrect! PLEASE CHECK! :( 
+#   result = 0
+# 
+# The result is correct! :) 
 # 
 # Read from register location 8: 
 #   opcode = 2 (PASSB)
@@ -6915,7 +6921,7 @@
 #   opcode = 6 (DIV)
 #   operand_a = 13
 #   operand_b = 0
-#   rezultat = x
+#   rezultat = 0
 # 
 # 
 # Check result function location 6:
@@ -6924,7 +6930,9 @@
 #   operand_b = 0
 #   test result: 0
 # 
-# The result is incorrect! PLEASE CHECK! :( 
+#   result = 0
+# 
+# The result is correct! :) 
 # 
 # Read from register location 18: 
 #   opcode = 6 (DIV)
@@ -6947,7 +6955,7 @@
 #   opcode = 6 (DIV)
 #   operand_a = 13
 #   operand_b = 0
-#   rezultat = x
+#   rezultat = 0
 # 
 # 
 # Check result function location 6:
@@ -6956,7 +6964,9 @@
 #   operand_b = 0
 #   test result: 0
 # 
-# The result is incorrect! PLEASE CHECK! :( 
+#   result = 0
+# 
+# The result is correct! :) 
 # 
 # Read from register location 4: 
 #   opcode = 5 (MULT)
@@ -8268,7 +8278,7 @@
 # 
 # 
 # TEST RESULT
-# Passed tests: 292. Total tests: 297.
+# Passed tests: 297. Total tests: 297.
 # 
 # ***********************************************************
 # ***  THIS IS A SELF-CHECKING TESTBENCH (YET).  YOU      ***
@@ -8278,5 +8288,5 @@
 # 
 # ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(106)
 #    Time: 7846 ns  Iteration: 1  Instance: /top/test
-# End time: 08:51:22 on Apr 10,2024, Elapsed time: 0:00:02
+# End time: 14:58:56 on Apr 16,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 2
