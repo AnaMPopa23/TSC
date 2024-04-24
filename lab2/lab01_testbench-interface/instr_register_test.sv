@@ -14,24 +14,24 @@ module instr_register_test
    output operand_t      operand_b,
    output opcode_t       opcode,
    output address_t      write_pointer,
-   output address_t      read_pointer,
+   output address_t      read_pointer,    //locatia
    input  instruction_t  instruction_word
   );
 
-  timeunit 1ns/1ns;
+  timeunit 1ns/1ns;              //1ns represents the reference time, and 1ns (second one) represents the precision value, up to what precision answer is considered
 
   parameter WR_NR = 3;           //setam cate citiri si scrieri
   parameter RD_NR =  2;
 
-  parameter READ_ORDER =5;
-  parameter WRITE_ORDER = 6; 
+  parameter READ_ORDER =1;
+  parameter WRITE_ORDER = 1; 
 
   parameter TEST_NAME =  "test"; 
 
-  parameter SEED_VAL = 2;                              
+  parameter SEED_VAL = 2;                          
 
-  instruction_t  iw_reg_test[0:31];
-  result_t result_test;
+  instruction_t  iw_reg_test[0:31];      //aici pun instruction_word
+  result_t result_test=0;
 
   //int seed = 555;    AP - 10/04/2024
   int seed = SEED_VAL;  
@@ -47,8 +47,8 @@ module instr_register_test
     $display(    "***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***");
     $display(    "***********************************************************");
 
-    for ( int READ_ORDER = 0; READ_ORDER  <= 2; READ_ORDER++ ) begin
-      for ( int WRITE_ORDER = 0; WRITE_ORDER <= 2; WRITE_ORDER ++ ) begin
+    //for ( int READ_ORDER = 0; READ_ORDER  <= 2; READ_ORDER++ ) begin
+      //for ( int WRITE_ORDER = 0; WRITE_ORDER <= 2; WRITE_ORDER ++ ) begin
         //$display("\nTest: READ_ORDER = %d, WRITE_ORDER = %d.\n", ro,wo);
 
         //READ_ORDER = ro;
@@ -61,10 +61,12 @@ module instr_register_test
         reset_n       <= 1'b0;          // assert reset_n (active low)
         repeat (2) @(posedge clk) ;     // hold in reset for 2 clock cycles asteapta 2 fronturi pizitiv e de test clk
         reset_n        = 1'b1;          // deassert reset_n (active low)
+        foreach (iw_reg_test[i])        //pentru a initializa testul cu 0
+          iw_reg_test[i] = '{opc:ZERO,default:0};
 
         $display("\nWriting values to register stack...");
         @(posedge clk) load_en = 1'b1;  // enable writing to register
-                                        //repeat (3) begin Ana Popa: 3/6/2025
+         //repeat (3) begin Ana Popa: 3/6/2025
         repeat (WR_NR) begin 
           @(posedge clk) randomize_transaction;
           @(negedge clk) print_transaction;
@@ -90,8 +92,8 @@ module instr_register_test
           check_results;
          end
 
-      end
-    end
+     // end
+   // end
 
     @(posedge clk);
     $display("\nTEST RESULT\nPassed tests: %0d. Total tests: %0d.", passed_tests, total_tests);
@@ -113,7 +115,7 @@ module instr_register_test
     // The stactic temp variable is required in order to write to fixed
     // addresses of 0, 1 and 2.  This will be replaceed with randomizeed
     // write_pointer values in a later lab
-    static int temp = 0;                                         // nu se mai aloca alta variabila de memorie, doar prima dara cand primeste valoarea
+   // static int temp = 0;                                         // nu se mai aloca alta variabila de memorie, doar prima dara cand primeste valoarea
                                                     
     if (WRITE_ORDER == 0) begin
        static int temp = 0;
@@ -135,11 +137,10 @@ module instr_register_test
     operand_a     = $random(seed)%16;                  // between -15 and 15
     // unsigned = nr poz din nr negativ
     operand_b     = $unsigned($random)%16;             // between 0 and 15
-    opcode        = opcode_t'($unsigned($random)%8);   // between 0 and 7, cast to opcode_t type
-    write_pointer = temp++;                            // temp++ = mai intai asigneaza 0 si dupa se incrementeaza
+    opcode        = opcode_t'($unsigned($random)%9);   // between 0 and 7, cast to opcode_t type
+    //write_pointer = temp++;                            // temp++ = mai intai asigneaza 0 si dupa se incrementeaza
     iw_reg_test[write_pointer] = '{opcode, operand_a, operand_b, 'b0};  //variabila auxiliara (temporara) pt a stoca date la un mom dat
     $display("After randomize transaction function: op_a = %0d, op_b =%0d, opcode = %0d, time = %0t \n", operand_a, operand_b, opcode, $time);
-
   endfunction: randomize_transaction
 
   function void print_transaction;
@@ -178,7 +179,15 @@ module instr_register_test
                result_test = {64{1'b0}}; 
              else
                result_test = iw_reg_test[read_pointer].op_a / iw_reg_test[read_pointer].op_b;
-        MOD: result_test = iw_reg_test[read_pointer].op_a % iw_reg_test[read_pointer].op_b;
+        //MOD: result_test = iw_reg_test[read_pointer].op_a % iw_reg_test[read_pointer].op_b;   17/04 AP
+        MOD:   if(iw_reg_test[read_pointer].op_b === 0)
+                        result_test = 0;
+                    else
+                      result_test = iw_reg_test[read_pointer].op_a % iw_reg_test[read_pointer].op_b;
+         POW: if(iw_reg_test[read_pointer].op_a === 0)
+                    result_test = 0;
+                else
+                    result_test = iw_reg_test[read_pointer].op_a ** iw_reg_test[read_pointer].op_b;
         default: result_test = {64{1'b0}};
       endcase
 

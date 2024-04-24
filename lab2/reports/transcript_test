@@ -1,6 +1,6 @@
 # 1
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 17:40:22 on Apr 22,2024
+# Start time: 17:22:13 on Apr 21,2024
 # vlog -sv -timescale 1ps/1ps -work work -f sources.txt 
 # -- Compiling package instr_register_pkg
 # -- Compiling module instr_register
@@ -10,10 +10,10 @@
 # 
 # Top level modules:
 # 	top
-# End time: 17:40:22 on Apr 22,2024, Elapsed time: 0:00:00
+# End time: 17:22:13 on Apr 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=case_85 -GWR_NR=50 -GRD_NR=32 -GWRITE_ORDER=2 -GSEED_VAL=4561235 -GREAD_ORDER=2 
-# Start time: 17:40:22 on Apr 22,2024
+# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=test -GWR_NR=50 -GRD_NR=32 -GWRITE_ORDER=2 -GSEED_VAL=4561235 -GREAD_ORDER=2 
+# Start time: 17:22:13 on Apr 21,2024
 # 
 # 
 # ***********************************************************
@@ -27,280 +27,280 @@
 # Writing values to register stack...
 # After randomize transaction function: op_a = -13, op_b =0, opcode = 6, time = 36 
 # 
-# Writing to register location 4: 
+# Writing to register location 0: 
 #   opcode = 6 (DIV)
 #   operand_a = -13
 #   operand_b = 0
 # 
 # After randomize transaction function: op_a = 0, op_b =8, opcode = 4, time = 46 
 # 
-# Writing to register location 27: 
+# Writing to register location 1: 
 #   opcode = 4 (SUB)
 #   operand_a = 0
 #   operand_b = 8
 # 
 # After randomize transaction function: op_a = 8, op_b =11, opcode = 8, time = 56 
 # 
-# Writing to register location 20: 
+# Writing to register location 2: 
 #   opcode = 8 (POW)
 #   operand_a = 8
 #   operand_b = 11
 # 
 # After randomize transaction function: op_a = -5, op_b =4, opcode = 3, time = 66 
 # 
-# Writing to register location 6: 
+# Writing to register location 3: 
 #   opcode = 3 (ADD)
 #   operand_a = -5
 #   operand_b = 4
 # 
 # After randomize transaction function: op_a = -12, op_b =6, opcode = 4, time = 76 
 # 
-# Writing to register location 25: 
+# Writing to register location 4: 
 #   opcode = 4 (SUB)
 #   operand_a = -12
 #   operand_b = 6
 # 
 # After randomize transaction function: op_a = 6, op_b =9, opcode = 4, time = 86 
 # 
-# Writing to register location 31: 
+# Writing to register location 5: 
 #   opcode = 4 (SUB)
 #   operand_a = 6
 #   operand_b = 9
 # 
 # After randomize transaction function: op_a = 9, op_b =15, opcode = 1, time = 96 
 # 
-# Writing to register location 22: 
+# Writing to register location 6: 
 #   opcode = 1 (PASSA)
 #   operand_a = 9
 #   operand_b = 15
 # 
 # After randomize transaction function: op_a = 15, op_b =6, opcode = 0, time = 106 
 # 
-# Writing to register location 5: 
+# Writing to register location 7: 
 #   opcode = 0 (ZERO)
 #   operand_a = 15
 #   operand_b = 6
 # 
 # After randomize transaction function: op_a = 6, op_b =5, opcode = 4, time = 116 
 # 
-# Writing to register location 13: 
+# Writing to register location 8: 
 #   opcode = 4 (SUB)
 #   operand_a = 6
 #   operand_b = 5
 # 
 # After randomize transaction function: op_a = 5, op_b =13, opcode = 6, time = 126 
 # 
-# Writing to register location 19: 
+# Writing to register location 9: 
 #   opcode = 6 (DIV)
 #   operand_a = 5
 #   operand_b = 13
 # 
 # After randomize transaction function: op_a = -3, op_b =3, opcode = 5, time = 136 
 # 
-# Writing to register location 5: 
+# Writing to register location 10: 
 #   opcode = 5 (MULT)
 #   operand_a = -3
 #   operand_b = 3
 # 
 # After randomize transaction function: op_a = -13, op_b =5, opcode = 3, time = 146 
 # 
-# Writing to register location 28: 
+# Writing to register location 11: 
 #   opcode = 3 (ADD)
 #   operand_a = -13
 #   operand_b = 5
 # 
 # After randomize transaction function: op_a = 5, op_b =12, opcode = 1, time = 156 
 # 
-# Writing to register location 26: 
+# Writing to register location 12: 
 #   opcode = 1 (PASSA)
 #   operand_a = 5
 #   operand_b = 12
 # 
 # After randomize transaction function: op_a = -4, op_b =10, opcode = 6, time = 166 
 # 
-# Writing to register location 25: 
+# Writing to register location 13: 
 #   opcode = 6 (DIV)
 #   operand_a = -4
 #   operand_b = 10
 # 
 # After randomize transaction function: op_a = -6, op_b =9, opcode = 0, time = 176 
 # 
-# Writing to register location 15: 
+# Writing to register location 14: 
 #   opcode = 0 (ZERO)
 #   operand_a = -6
 #   operand_b = 9
 # 
 # After randomize transaction function: op_a = -7, op_b =15, opcode = 2, time = 186 
 # 
-# Writing to register location 10: 
+# Writing to register location 15: 
 #   opcode = 2 (PASSB)
 #   operand_a = -7
 #   operand_b = 15
 # 
 # After randomize transaction function: op_a = 15, op_b =10, opcode = 8, time = 196 
 # 
-# Writing to register location 7: 
+# Writing to register location 16: 
 #   opcode = 8 (POW)
 #   operand_a = 15
 #   operand_b = 10
 # 
 # After randomize transaction function: op_a = -6, op_b =7, opcode = 8, time = 206 
 # 
-# Writing to register location 29: 
+# Writing to register location 17: 
 #   opcode = 8 (POW)
 #   operand_a = -6
 #   operand_b = 7
 # 
 # After randomize transaction function: op_a = -9, op_b =13, opcode = 7, time = 216 
 # 
-# Writing to register location 6: 
+# Writing to register location 18: 
 #   opcode = 7 (MOD)
 #   operand_a = -9
 #   operand_b = 13
 # 
 # After randomize transaction function: op_a = 13, op_b =6, opcode = 2, time = 226 
 # 
-# Writing to register location 24: 
+# Writing to register location 19: 
 #   opcode = 2 (PASSB)
 #   operand_a = 13
 #   operand_b = 6
 # 
 # After randomize transaction function: op_a = 6, op_b =8, opcode = 4, time = 236 
 # 
-# Writing to register location 9: 
+# Writing to register location 20: 
 #   opcode = 4 (SUB)
 #   operand_a = 6
 #   operand_b = 8
 # 
 # After randomize transaction function: op_a = 8, op_b =9, opcode = 1, time = 246 
 # 
-# Writing to register location 2: 
+# Writing to register location 21: 
 #   opcode = 1 (PASSA)
 #   operand_a = 8
 #   operand_b = 9
 # 
 # After randomize transaction function: op_a = -7, op_b =2, opcode = 2, time = 256 
 # 
-# Writing to register location 10: 
+# Writing to register location 22: 
 #   opcode = 2 (PASSB)
 #   operand_a = -7
 #   operand_b = 2
 # 
 # After randomize transaction function: op_a = 2, op_b =10, opcode = 1, time = 266 
 # 
-# Writing to register location 5: 
+# Writing to register location 23: 
 #   opcode = 1 (PASSA)
 #   operand_a = 2
 #   operand_b = 10
 # 
 # After randomize transaction function: op_a = 10, op_b =5, opcode = 1, time = 276 
 # 
-# Writing to register location 27: 
+# Writing to register location 24: 
 #   opcode = 1 (PASSA)
 #   operand_a = 10
 #   operand_b = 5
 # 
 # After randomize transaction function: op_a = 5, op_b =11, opcode = 2, time = 286 
 # 
-# Writing to register location 0: 
+# Writing to register location 25: 
 #   opcode = 2 (PASSB)
 #   operand_a = 5
 #   operand_b = 11
 # 
 # After randomize transaction function: op_a = 11, op_b =0, opcode = 0, time = 296 
 # 
-# Writing to register location 4: 
+# Writing to register location 26: 
 #   opcode = 0 (ZERO)
 #   operand_a = 11
 #   operand_b = 0
 # 
 # After randomize transaction function: op_a = 0, op_b =4, opcode = 1, time = 306 
 # 
-# Writing to register location 5: 
+# Writing to register location 27: 
 #   opcode = 1 (PASSA)
 #   operand_a = 0
 #   operand_b = 4
 # 
 # After randomize transaction function: op_a = -12, op_b =5, opcode = 7, time = 316 
 # 
-# Writing to register location 4: 
+# Writing to register location 28: 
 #   opcode = 7 (MOD)
 #   operand_a = -12
 #   operand_b = 5
 # 
 # After randomize transaction function: op_a = 5, op_b =4, opcode = 4, time = 326 
 # 
-# Writing to register location 16: 
+# Writing to register location 29: 
 #   opcode = 4 (SUB)
 #   operand_a = 5
 #   operand_b = 4
 # 
 # After randomize transaction function: op_a = 4, op_b =0, opcode = 3, time = 336 
 # 
-# Writing to register location 15: 
+# Writing to register location 30: 
 #   opcode = 3 (ADD)
 #   operand_a = 4
 #   operand_b = 0
 # 
 # After randomize transaction function: op_a = 0, op_b =15, opcode = 6, time = 346 
 # 
-# Writing to register location 6: 
+# Writing to register location 31: 
 #   opcode = 6 (DIV)
 #   operand_a = 0
 #   operand_b = 15
 # 
 # After randomize transaction function: op_a = 15, op_b =6, opcode = 3, time = 356 
 # 
-# Writing to register location 29: 
+# Writing to register location 0: 
 #   opcode = 3 (ADD)
 #   operand_a = 15
 #   operand_b = 6
 # 
 # After randomize transaction function: op_a = 6, op_b =13, opcode = 5, time = 366 
 # 
-# Writing to register location 22: 
+# Writing to register location 1: 
 #   opcode = 5 (MULT)
 #   operand_a = 6
 #   operand_b = 13
 # 
 # After randomize transaction function: op_a = 13, op_b =6, opcode = 7, time = 376 
 # 
-# Writing to register location 17: 
+# Writing to register location 2: 
 #   opcode = 7 (MOD)
 #   operand_a = 13
 #   operand_b = 6
 # 
 # After randomize transaction function: op_a = -10, op_b =1, opcode = 8, time = 386 
 # 
-# Writing to register location 19: 
+# Writing to register location 3: 
 #   opcode = 8 (POW)
 #   operand_a = -10
 #   operand_b = 1
 # 
 # After randomize transaction function: op_a = 1, op_b =3, opcode = 2, time = 396 
 # 
-# Writing to register location 16: 
+# Writing to register location 4: 
 #   opcode = 2 (PASSB)
 #   operand_a = 1
 #   operand_b = 3
 # 
 # After randomize transaction function: op_a = -13, op_b =0, opcode = 0, time = 406 
 # 
-# Writing to register location 17: 
+# Writing to register location 5: 
 #   opcode = 0 (ZERO)
 #   operand_a = -13
 #   operand_b = 0
 # 
 # After randomize transaction function: op_a = 0, op_b =1, opcode = 1, time = 416 
 # 
-# Writing to register location 20: 
+# Writing to register location 6: 
 #   opcode = 1 (PASSA)
 #   operand_a = 0
 #   operand_b = 1
 # 
 # After randomize transaction function: op_a = -15, op_b =4, opcode = 1, time = 426 
 # 
-# Writing to register location 22: 
+# Writing to register location 7: 
 #   opcode = 1 (PASSA)
 #   operand_a = -15
 #   operand_b = 4
@@ -314,63 +314,63 @@
 # 
 # After randomize transaction function: op_a = 6, op_b =8, opcode = 8, time = 446 
 # 
-# Writing to register location 18: 
+# Writing to register location 9: 
 #   opcode = 8 (POW)
 #   operand_a = 6
 #   operand_b = 8
 # 
 # After randomize transaction function: op_a = 8, op_b =2, opcode = 5, time = 456 
 # 
-# Writing to register location 5: 
+# Writing to register location 10: 
 #   opcode = 5 (MULT)
 #   operand_a = 8
 #   operand_b = 2
 # 
 # After randomize transaction function: op_a = 2, op_b =5, opcode = 6, time = 466 
 # 
-# Writing to register location 26: 
+# Writing to register location 11: 
 #   opcode = 6 (DIV)
 #   operand_a = 2
 #   operand_b = 5
 # 
 # After randomize transaction function: op_a = -11, op_b =10, opcode = 7, time = 476 
 # 
-# Writing to register location 11: 
+# Writing to register location 12: 
 #   opcode = 7 (MOD)
 #   operand_a = -11
 #   operand_b = 10
 # 
 # After randomize transaction function: op_a = -6, op_b =11, opcode = 8, time = 486 
 # 
-# Writing to register location 7: 
+# Writing to register location 13: 
 #   opcode = 8 (POW)
 #   operand_a = -6
 #   operand_b = 11
 # 
 # After randomize transaction function: op_a = 11, op_b =7, opcode = 4, time = 496 
 # 
-# Writing to register location 0: 
+# Writing to register location 14: 
 #   opcode = 4 (SUB)
 #   operand_a = 11
 #   operand_b = 7
 # 
 # After randomize transaction function: op_a = 7, op_b =0, opcode = 6, time = 506 
 # 
-# Writing to register location 8: 
+# Writing to register location 15: 
 #   opcode = 6 (DIV)
 #   operand_a = 7
 #   operand_b = 0
 # 
 # After randomize transaction function: op_a = 0, op_b =8, opcode = 5, time = 516 
 # 
-# Writing to register location 25: 
+# Writing to register location 16: 
 #   opcode = 5 (MULT)
 #   operand_a = 0
 #   operand_b = 8
 # 
 # After randomize transaction function: op_a = -8, op_b =9, opcode = 1, time = 526 
 # 
-# Writing to register location 5: 
+# Writing to register location 17: 
 #   opcode = 1 (PASSA)
 #   operand_a = -8
 #   operand_b = 9
@@ -378,241 +378,30 @@
 # 
 # Reading back the same register locations written...
 # Read from register location 21: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-#   rezultat = 0
-# 
-# Read from register location 19: 
-#   opcode = 8 (POW)
-#   operand_a = -10
-#   operand_b = 1
-#   rezultat = -10
-# 
-# 
-# Check result function location 19:
-#   opcode = 8 (POW)
-#   operand_a = -10
-#   operand_b = 1
-#   test result: -10
-# 
-#   result = -10
-# 
-# The result is correct! :) 
-# 
-# Read from register location 30: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-#   rezultat = 0
-# 
-# Read from register location 22: 
 #   opcode = 1 (PASSA)
-#   operand_a = -15
-#   operand_b = 4
-#   rezultat = -15
-# 
-# 
-# Check result function location 22:
-#   opcode = 1 (PASSA)
-#   operand_a = -15
-#   operand_b = 4
-#   test result: -15
-# 
-#   result = -15
-# 
-# The result is correct! :) 
-# 
-# Read from register location 30: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-#   rezultat = 0
-# 
-# Read from register location 7: 
-#   opcode = 8 (POW)
-#   operand_a = -6
-#   operand_b = 11
-#   rezultat = -362797056
-# 
-# 
-# Check result function location 7:
-#   opcode = 8 (POW)
-#   operand_a = -6
-#   operand_b = 11
-#   test result: -362797056
-# 
-#   result = -362797056
-# 
-# The result is correct! :) 
-# 
-# Read from register location 27: 
-#   opcode = 1 (PASSA)
-#   operand_a = 10
-#   operand_b = 5
-#   rezultat = 10
-# 
-# 
-# Check result function location 27:
-#   opcode = 1 (PASSA)
-#   operand_a = 10
-#   operand_b = 5
-#   test result: 10
-# 
-#   result = 10
-# 
-# The result is correct! :) 
-# 
-# Read from register location 9: 
-#   opcode = 4 (SUB)
-#   operand_a = 6
-#   operand_b = 8
-#   rezultat = -2
-# 
-# 
-# Check result function location 9:
-#   opcode = 4 (SUB)
-#   operand_a = 6
-#   operand_b = 8
-#   test result: -2
-# 
-#   result = -2
-# 
-# The result is correct! :) 
-# 
-# Read from register location 15: 
-#   opcode = 3 (ADD)
-#   operand_a = 4
-#   operand_b = 0
-#   rezultat = 4
-# 
-# 
-# Check result function location 15:
-#   opcode = 3 (ADD)
-#   operand_a = 4
-#   operand_b = 0
-#   test result: 4
-# 
-#   result = 4
-# 
-# The result is correct! :) 
-# 
-# Read from register location 31: 
-#   opcode = 4 (SUB)
-#   operand_a = 6
+#   operand_a = 8
 #   operand_b = 9
-#   rezultat = -3
+#   rezultat = 8
 # 
 # 
-# Check result function location 31:
-#   opcode = 4 (SUB)
-#   operand_a = 6
+# Check result function location 21:
+#   opcode = 1 (PASSA)
+#   operand_a = 8
 #   operand_b = 9
-#   test result: -3
+#   test result: 8
 # 
-#   result = -3
+#   result = 8
 # 
 # The result is correct! :) 
 # 
 # Read from register location 19: 
-#   opcode = 8 (POW)
-#   operand_a = -10
-#   operand_b = 1
-#   rezultat = -10
-# 
-# 
-# Check result function location 19:
-#   opcode = 8 (POW)
-#   operand_a = -10
-#   operand_b = 1
-#   test result: -10
-# 
-#   result = -10
-# 
-# The result is correct! :) 
-# 
-# Read from register location 5: 
-#   opcode = 1 (PASSA)
-#   operand_a = -8
-#   operand_b = 9
-#   rezultat = -8
-# 
-# 
-# Check result function location 5:
-#   opcode = 1 (PASSA)
-#   operand_a = -8
-#   operand_b = 9
-#   test result: -8
-# 
-#   result = -8
-# 
-# The result is correct! :) 
-# 
-# Read from register location 0: 
-#   opcode = 4 (SUB)
-#   operand_a = 11
-#   operand_b = 7
-#   rezultat = 4
-# 
-# 
-# Check result function location 0:
-#   opcode = 4 (SUB)
-#   operand_a = 11
-#   operand_b = 7
-#   test result: 4
-# 
-#   result = 4
-# 
-# The result is correct! :) 
-# 
-# Read from register location 6: 
-#   opcode = 6 (DIV)
-#   operand_a = 0
-#   operand_b = 15
-#   rezultat = 0
-# 
-# 
-# Check result function location 6:
-#   opcode = 6 (DIV)
-#   operand_a = 0
-#   operand_b = 15
-#   test result: 0
-# 
-#   result = 0
-# 
-# The result is correct! :) 
-# 
-# Read from register location 3: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-#   rezultat = 0
-# 
-# Read from register location 5: 
-#   opcode = 1 (PASSA)
-#   operand_a = -8
-#   operand_b = 9
-#   rezultat = -8
-# 
-# 
-# Check result function location 5:
-#   opcode = 1 (PASSA)
-#   operand_a = -8
-#   operand_b = 9
-#   test result: -8
-# 
-#   result = -8
-# 
-# The result is correct! :) 
-# 
-# Read from register location 24: 
 #   opcode = 2 (PASSB)
 #   operand_a = 13
 #   operand_b = 6
 #   rezultat = 6
 # 
 # 
-# Check result function location 24:
+# Check result function location 19:
 #   opcode = 2 (PASSB)
 #   operand_a = 13
 #   operand_b = 6
@@ -622,65 +411,14 @@
 # 
 # The result is correct! :) 
 # 
-# Read from register location 28: 
-#   opcode = 3 (ADD)
-#   operand_a = -13
-#   operand_b = 5
-#   rezultat = -8
-# 
-# 
-# Check result function location 28:
-#   opcode = 3 (ADD)
-#   operand_a = -13
-#   operand_b = 5
-#   test result: -8
-# 
-#   result = -8
-# 
-# The result is correct! :) 
-# 
-# Read from register location 5: 
-#   opcode = 1 (PASSA)
-#   operand_a = -8
-#   operand_b = 9
-#   rezultat = -8
-# 
-# 
-# Check result function location 5:
-#   opcode = 1 (PASSA)
-#   operand_a = -8
-#   operand_b = 9
-#   test result: -8
-# 
-#   result = -8
-# 
-# The result is correct! :) 
-# 
-# Read from register location 13: 
-#   opcode = 4 (SUB)
-#   operand_a = 6
-#   operand_b = 5
-#   rezultat = 1
-# 
-# 
-# Check result function location 13:
-#   opcode = 4 (SUB)
-#   operand_a = 6
-#   operand_b = 5
-#   test result: 1
-# 
-#   result = 1
-# 
-# The result is correct! :) 
-# 
-# Read from register location 15: 
+# Read from register location 30: 
 #   opcode = 3 (ADD)
 #   operand_a = 4
 #   operand_b = 0
 #   rezultat = 4
 # 
 # 
-# Check result function location 15:
+# Check result function location 30:
 #   opcode = 3 (ADD)
 #   operand_a = 4
 #   operand_b = 0
@@ -690,20 +428,48 @@
 # 
 # The result is correct! :) 
 # 
-# Read from register location 12: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-#   rezultat = 0
-# 
 # Read from register location 22: 
+#   opcode = 2 (PASSB)
+#   operand_a = -7
+#   operand_b = 2
+#   rezultat = 2
+# 
+# 
+# Check result function location 22:
+#   opcode = 2 (PASSB)
+#   operand_a = -7
+#   operand_b = 2
+#   test result: 2
+# 
+#   result = 2
+# 
+# The result is correct! :) 
+# 
+# Read from register location 30: 
+#   opcode = 3 (ADD)
+#   operand_a = 4
+#   operand_b = 0
+#   rezultat = 4
+# 
+# 
+# Check result function location 30:
+#   opcode = 3 (ADD)
+#   operand_a = 4
+#   operand_b = 0
+#   test result: 4
+# 
+#   result = 4
+# 
+# The result is correct! :) 
+# 
+# Read from register location 7: 
 #   opcode = 1 (PASSA)
 #   operand_a = -15
 #   operand_b = 4
 #   rezultat = -15
 # 
 # 
-# Check result function location 22:
+# Check result function location 7:
 #   opcode = 1 (PASSA)
 #   operand_a = -15
 #   operand_b = 4
@@ -713,17 +479,102 @@
 # 
 # The result is correct! :) 
 # 
-# Read from register location 20: 
+# Read from register location 27: 
 #   opcode = 1 (PASSA)
 #   operand_a = 0
-#   operand_b = 1
+#   operand_b = 4
 #   rezultat = 0
 # 
 # 
-# Check result function location 20:
+# Check result function location 27:
 #   opcode = 1 (PASSA)
 #   operand_a = 0
-#   operand_b = 1
+#   operand_b = 4
+#   test result: 0
+# 
+#   result = 0
+# 
+# The result is correct! :) 
+# 
+# Read from register location 9: 
+#   opcode = 8 (POW)
+#   operand_a = 6
+#   operand_b = 8
+#   rezultat = 1679616
+# 
+# 
+# Check result function location 9:
+#   opcode = 8 (POW)
+#   operand_a = 6
+#   operand_b = 8
+#   test result: 1679616
+# 
+#   result = 1679616
+# 
+# The result is correct! :) 
+# 
+# Read from register location 15: 
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 0
+#   rezultat = 0
+# 
+# 
+# Check result function location 15:
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 0
+#   test result: 0
+# 
+#   result = 0
+# 
+# The result is correct! :) 
+# 
+# Read from register location 31: 
+#   opcode = 6 (DIV)
+#   operand_a = 0
+#   operand_b = 15
+#   rezultat = 0
+# 
+# 
+# Check result function location 31:
+#   opcode = 6 (DIV)
+#   operand_a = 0
+#   operand_b = 15
+#   test result: 0
+# 
+#   result = 0
+# 
+# The result is correct! :) 
+# 
+# Read from register location 19: 
+#   opcode = 2 (PASSB)
+#   operand_a = 13
+#   operand_b = 6
+#   rezultat = 6
+# 
+# 
+# Check result function location 19:
+#   opcode = 2 (PASSB)
+#   operand_a = 13
+#   operand_b = 6
+#   test result: 6
+# 
+#   result = 6
+# 
+# The result is correct! :) 
+# 
+# Read from register location 5: 
+#   opcode = 0 (ZERO)
+#   operand_a = -13
+#   operand_b = 0
+#   rezultat = 0
+# 
+# 
+# Check result function location 5:
+#   opcode = 0 (ZERO)
+#   operand_a = -13
+#   operand_b = 0
 #   test result: 0
 # 
 #   result = 0
@@ -731,47 +582,30 @@
 # The result is correct! :) 
 # 
 # Read from register location 0: 
-#   opcode = 4 (SUB)
-#   operand_a = 11
-#   operand_b = 7
-#   rezultat = 4
+#   opcode = 3 (ADD)
+#   operand_a = 15
+#   operand_b = 6
+#   rezultat = 21
 # 
 # 
 # Check result function location 0:
-#   opcode = 4 (SUB)
-#   operand_a = 11
-#   operand_b = 7
-#   test result: 4
+#   opcode = 3 (ADD)
+#   operand_a = 15
+#   operand_b = 6
+#   test result: 21
 # 
-#   result = 4
+#   result = 21
 # 
 # The result is correct! :) 
 # 
-# Read from register location 15: 
-#   opcode = 3 (ADD)
-#   operand_a = 4
-#   operand_b = 0
-#   rezultat = 4
-# 
-# 
-# Check result function location 15:
-#   opcode = 3 (ADD)
-#   operand_a = 4
-#   operand_b = 0
-#   test result: 4
-# 
-#   result = 4
-# 
-# The result is correct! :) 
-# 
-# Read from register location 20: 
+# Read from register location 6: 
 #   opcode = 1 (PASSA)
 #   operand_a = 0
 #   operand_b = 1
 #   rezultat = 0
 # 
 # 
-# Check result function location 20:
+# Check result function location 6:
 #   opcode = 1 (PASSA)
 #   operand_a = 0
 #   operand_b = 1
@@ -781,80 +615,323 @@
 # 
 # The result is correct! :) 
 # 
-# Read from register location 21: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-#   rezultat = 0
+# Read from register location 3: 
+#   opcode = 8 (POW)
+#   operand_a = -10
+#   operand_b = 1
+#   rezultat = -10
 # 
-# Read from register location 23: 
-#   opcode = 0 (ZERO)
-#   operand_a = 0
-#   operand_b = 0
-#   rezultat = 0
+# 
+# Check result function location 3:
+#   opcode = 8 (POW)
+#   operand_a = -10
+#   operand_b = 1
+#   test result: -10
+# 
+#   result = -10
+# 
+# The result is correct! :) 
 # 
 # Read from register location 5: 
-#   opcode = 1 (PASSA)
-#   operand_a = -8
-#   operand_b = 9
-#   rezultat = -8
+#   opcode = 0 (ZERO)
+#   operand_a = -13
+#   operand_b = 0
+#   rezultat = 0
 # 
 # 
 # Check result function location 5:
+#   opcode = 0 (ZERO)
+#   operand_a = -13
+#   operand_b = 0
+#   test result: 0
+# 
+#   result = 0
+# 
+# The result is correct! :) 
+# 
+# Read from register location 24: 
 #   opcode = 1 (PASSA)
-#   operand_a = -8
+#   operand_a = 10
+#   operand_b = 5
+#   rezultat = 10
+# 
+# 
+# Check result function location 24:
+#   opcode = 1 (PASSA)
+#   operand_a = 10
+#   operand_b = 5
+#   test result: 10
+# 
+#   result = 10
+# 
+# The result is correct! :) 
+# 
+# Read from register location 28: 
+#   opcode = 7 (MOD)
+#   operand_a = -12
+#   operand_b = 5
+#   rezultat = -2
+# 
+# 
+# Check result function location 28:
+#   opcode = 7 (MOD)
+#   operand_a = -12
+#   operand_b = 5
+#   test result: -2
+# 
+#   result = -2
+# 
+# The result is correct! :) 
+# 
+# Read from register location 5: 
+#   opcode = 0 (ZERO)
+#   operand_a = -13
+#   operand_b = 0
+#   rezultat = 0
+# 
+# 
+# Check result function location 5:
+#   opcode = 0 (ZERO)
+#   operand_a = -13
+#   operand_b = 0
+#   test result: 0
+# 
+#   result = 0
+# 
+# The result is correct! :) 
+# 
+# Read from register location 13: 
+#   opcode = 8 (POW)
+#   operand_a = -6
+#   operand_b = 11
+#   rezultat = -362797056
+# 
+# 
+# Check result function location 13:
+#   opcode = 8 (POW)
+#   operand_a = -6
+#   operand_b = 11
+#   test result: -362797056
+# 
+#   result = -362797056
+# 
+# The result is correct! :) 
+# 
+# Read from register location 15: 
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 0
+#   rezultat = 0
+# 
+# 
+# Check result function location 15:
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 0
+#   test result: 0
+# 
+#   result = 0
+# 
+# The result is correct! :) 
+# 
+# Read from register location 12: 
+#   opcode = 7 (MOD)
+#   operand_a = -11
+#   operand_b = 10
+#   rezultat = -1
+# 
+# 
+# Check result function location 12:
+#   opcode = 7 (MOD)
+#   operand_a = -11
+#   operand_b = 10
+#   test result: -1
+# 
+#   result = -1
+# 
+# The result is correct! :) 
+# 
+# Read from register location 22: 
+#   opcode = 2 (PASSB)
+#   operand_a = -7
+#   operand_b = 2
+#   rezultat = 2
+# 
+# 
+# Check result function location 22:
+#   opcode = 2 (PASSB)
+#   operand_a = -7
+#   operand_b = 2
+#   test result: 2
+# 
+#   result = 2
+# 
+# The result is correct! :) 
+# 
+# Read from register location 20: 
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 8
+#   rezultat = -2
+# 
+# 
+# Check result function location 20:
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 8
+#   test result: -2
+# 
+#   result = -2
+# 
+# The result is correct! :) 
+# 
+# Read from register location 0: 
+#   opcode = 3 (ADD)
+#   operand_a = 15
+#   operand_b = 6
+#   rezultat = 21
+# 
+# 
+# Check result function location 0:
+#   opcode = 3 (ADD)
+#   operand_a = 15
+#   operand_b = 6
+#   test result: 21
+# 
+#   result = 21
+# 
+# The result is correct! :) 
+# 
+# Read from register location 15: 
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 0
+#   rezultat = 0
+# 
+# 
+# Check result function location 15:
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 0
+#   test result: 0
+# 
+#   result = 0
+# 
+# The result is correct! :) 
+# 
+# Read from register location 20: 
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 8
+#   rezultat = -2
+# 
+# 
+# Check result function location 20:
+#   opcode = 4 (SUB)
+#   operand_a = 6
+#   operand_b = 8
+#   test result: -2
+# 
+#   result = -2
+# 
+# The result is correct! :) 
+# 
+# Read from register location 21: 
+#   opcode = 1 (PASSA)
+#   operand_a = 8
 #   operand_b = 9
-#   test result: -8
+#   rezultat = 8
 # 
-#   result = -8
+# 
+# Check result function location 21:
+#   opcode = 1 (PASSA)
+#   operand_a = 8
+#   operand_b = 9
+#   test result: 8
+# 
+#   result = 8
+# 
+# The result is correct! :) 
+# 
+# Read from register location 23: 
+#   opcode = 1 (PASSA)
+#   operand_a = 2
+#   operand_b = 10
+#   rezultat = 2
+# 
+# 
+# Check result function location 23:
+#   opcode = 1 (PASSA)
+#   operand_a = 2
+#   operand_b = 10
+#   test result: 2
+# 
+#   result = 2
+# 
+# The result is correct! :) 
+# 
+# Read from register location 5: 
+#   opcode = 0 (ZERO)
+#   operand_a = -13
+#   operand_b = 0
+#   rezultat = 0
+# 
+# 
+# Check result function location 5:
+#   opcode = 0 (ZERO)
+#   operand_a = -13
+#   operand_b = 0
+#   test result: 0
+# 
+#   result = 0
 # 
 # The result is correct! :) 
 # 
 # Read from register location 13: 
-#   opcode = 4 (SUB)
-#   operand_a = 6
-#   operand_b = 5
-#   rezultat = 1
+#   opcode = 8 (POW)
+#   operand_a = -6
+#   operand_b = 11
+#   rezultat = -362797056
 # 
 # 
 # Check result function location 13:
-#   opcode = 4 (SUB)
-#   operand_a = 6
-#   operand_b = 5
-#   test result: 1
+#   opcode = 8 (POW)
+#   operand_a = -6
+#   operand_b = 11
+#   test result: -362797056
 # 
-#   result = 1
+#   result = -362797056
 # 
 # The result is correct! :) 
 # 
 # Read from register location 13: 
-#   opcode = 4 (SUB)
-#   operand_a = 6
-#   operand_b = 5
-#   rezultat = 1
+#   opcode = 8 (POW)
+#   operand_a = -6
+#   operand_b = 11
+#   rezultat = -362797056
 # 
 # 
 # Check result function location 13:
-#   opcode = 4 (SUB)
-#   operand_a = 6
-#   operand_b = 5
-#   test result: 1
+#   opcode = 8 (POW)
+#   operand_a = -6
+#   operand_b = 11
+#   test result: -362797056
 # 
-#   result = 1
+#   result = -362797056
 # 
 # The result is correct! :) 
 # 
 # Read from register location 6: 
-#   opcode = 6 (DIV)
+#   opcode = 1 (PASSA)
 #   operand_a = 0
-#   operand_b = 15
+#   operand_b = 1
 #   rezultat = 0
 # 
 # 
 # Check result function location 6:
-#   opcode = 6 (DIV)
+#   opcode = 1 (PASSA)
 #   operand_a = 0
-#   operand_b = 15
+#   operand_b = 1
 #   test result: 0
 # 
 #   result = 0
@@ -863,7 +940,7 @@
 # 
 # 
 # TEST RESULT
-# Passed tests: 26. Total tests: 26.
+# Passed tests: 33. Total tests: 33.
 # 
 # ***********************************************************
 # ***  THIS IS A SELF-CHECKING TESTBENCH (YET).  YOU      ***
@@ -873,5 +950,5 @@
 # 
 # ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(106)
 #    Time: 886 ns  Iteration: 1  Instance: /top/test
-# End time: 17:40:23 on Apr 22,2024, Elapsed time: 0:00:01
+# End time: 17:22:14 on Apr 21,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

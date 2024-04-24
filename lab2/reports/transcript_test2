@@ -1,7 +1,7 @@
 # 1
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 17:40:22 on Apr 22,2024
-# vlog -sv -timescale 1ps/1ps -work work -f sources.txt 
+# Start time: 17:31:37 on Apr 21,2024
+# vlog -reportprogress 300 -sv -timescale 1ps/1ps -work work -f sources.txt 
 # -- Compiling package instr_register_pkg
 # -- Compiling module instr_register
 # -- Importing package instr_register_pkg
@@ -10,10 +10,10 @@
 # 
 # Top level modules:
 # 	top
-# End time: 17:40:22 on Apr 22,2024, Elapsed time: 0:00:00
+# End time: 17:31:37 on Apr 21,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=case_85 -GWR_NR=50 -GRD_NR=32 -GWRITE_ORDER=2 -GSEED_VAL=4561235 -GREAD_ORDER=2 
-# Start time: 17:40:22 on Apr 22,2024
+# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=test2 -GWR_NR=50 -GRD_NR=32 -GWRITE_ORDER=2 -GSEED_VAL=4561235 -GREAD_ORDER=2 
+# Start time: 17:31:37 on Apr 21,2024
 # 
 # 
 # ***********************************************************
@@ -873,5 +873,10 @@
 # 
 # ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(106)
 #    Time: 886 ns  Iteration: 1  Instance: /top/test
-# End time: 17:40:23 on Apr 22,2024, Elapsed time: 0:00:01
+# 1
+# Break in Module instr_register_test at ../lab01_testbench-interface/instr_register_test.sv line 106
+# Simulation Breakpoint: 1
+# Break in Module instr_register_test at ../lab01_testbench-interface/instr_register_test.sv line 106
+# MACRO ./run.do PAUSED at line 49
+# End time: 17:32:51 on Apr 21,2024, Elapsed time: 0:01:14
 # Errors: 0, Warnings: 0

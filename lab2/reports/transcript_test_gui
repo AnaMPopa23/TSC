@@ -1,7 +1,7 @@
 # 1
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 17:37:09 on Apr 22,2024
-# vlog -sv -timescale 1ps/1ps -work work -f sources.txt 
+# Start time: 20:46:15 on Apr 23,2024
+# vlog -reportprogress 300 -sv -timescale 1ps/1ps -work work -f sources.txt 
 # -- Compiling package instr_register_pkg
 # -- Compiling module instr_register
 # -- Importing package instr_register_pkg
@@ -10,10 +10,10 @@
 # 
 # Top level modules:
 # 	top
-# End time: 17:37:09 on Apr 22,2024, Elapsed time: 0:00:00
+# End time: 20:46:15 on Apr 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=case_1 -GWR_NR=50 -GRD_NR=32 -GWRITE_ORDER=2 -GSEED_VAL=2356785 -GREAD_ORDER=2 
-# Start time: 17:37:10 on Apr 22,2024
+# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top -GTEST_NAME=test_gui -GWR_NR=50 -GRD_NR=32 -GWRITE_ORDER=2 -GSEED_VAL=2356785 -GREAD_ORDER=2 
+# Start time: 20:46:15 on Apr 23,2024
 # 
 # 
 # ***********************************************************
@@ -740,6 +740,17 @@
 #   operand_b = 0
 #   rezultat = 0
 # 
+# 
+# Check result function location 12:
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   test result: 0
+# 
+#   result = 0
+# 
+# The result is correct! :) 
+# 
 # Read from register location 28: 
 #   opcode = 1 (PASSA)
 #   operand_a = 10
@@ -762,6 +773,17 @@
 #   operand_a = 0
 #   operand_b = 0
 #   rezultat = 0
+# 
+# 
+# Check result function location 23:
+#   opcode = 0 (ZERO)
+#   operand_a = 0
+#   operand_b = 0
+#   test result: 0
+# 
+#   result = 0
+# 
+# The result is correct! :) 
 # 
 # Read from register location 28: 
 #   opcode = 1 (PASSA)
@@ -918,7 +940,7 @@
 # 
 # 
 # TEST RESULT
-# Passed tests: 31. Total tests: 31.
+# Passed tests: 33. Total tests: 33.
 # 
 # ***********************************************************
 # ***  THIS IS A SELF-CHECKING TESTBENCH (YET).  YOU      ***
@@ -926,7 +948,33 @@
 # ***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***
 # ***********************************************************
 # 
-# ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(106)
+# ** Note: $finish    : ../lab01_testbench-interface/instr_register_test.sv(108)
 #    Time: 886 ns  Iteration: 1  Instance: /top/test
-# End time: 17:37:10 on Apr 22,2024, Elapsed time: 0:00:00
+# 1
+# Break in Module instr_register_test at ../lab01_testbench-interface/instr_register_test.sv line 108
+# Simulation Breakpoint: 1
+# Break in Module instr_register_test at ../lab01_testbench-interface/instr_register_test.sv line 108
+# MACRO ./run.do PAUSED at line 49
+add wave -position insertpoint  \
+sim:/top/test/write_pointer \
+sim:/top/test/WRITE_ORDER \
+sim:/top/test/WR_NR \
+sim:/top/test/total_tests \
+sim:/top/test/TEST_NAME \
+sim:/top/test/SEED_VAL \
+sim:/top/test/seed \
+sim:/top/test/result_test \
+sim:/top/test/reset_n \
+sim:/top/test/read_pointer \
+sim:/top/test/READ_ORDER \
+sim:/top/test/RD_NR \
+sim:/top/test/passed_tests \
+sim:/top/test/operand_b \
+sim:/top/test/operand_a \
+sim:/top/test/opcode \
+sim:/top/test/load_en \
+sim:/top/test/iw_reg_test \
+sim:/top/test/instruction_word \
+sim:/top/test/clk
+# End time: 09:16:07 on Apr 24,2024, Elapsed time: 12:29:52
 # Errors: 0, Warnings: 0
